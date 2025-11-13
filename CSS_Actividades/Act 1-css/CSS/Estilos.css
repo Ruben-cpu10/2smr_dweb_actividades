@@ -1,0 +1,36 @@
+body { /* Color de la pagina gris */
+    background-color: lightgrey;
+    font-family: sans-serif, Arial, Arial, Helvetica;
+    margin: 10px;
+}
+h1 {
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 300%;
+}
+
+h2 {
+    background-color: gray;
+    color: white;
+    padding: 3px;
+}
+
+img {
+    float: left;
+    
+
+}
+p {
+    margin: 0px 10%;
+    text-indent: 50px;
+    
+    
+    
+}
+
+.imgIzq {
+    /* margen abajo y derecha 10px */
+    margin: 0px 10px 10px 0px;
+    width: 106px;
+    height: 150px;
+}
