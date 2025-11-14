@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+}
+
+header, main, footer {
+    max-width: 900px;
+    margin: 0 auto ;
+}
+ 
+
+
+header {
+    background-color: #076896;
+    color: white;
+    text-align: center;
+    border-bottom: 8px;
+    border-radius: 0px 0 4px 4px;
+    padding-top: 0.5px;
+    box-shadow:  0rem 0.2rem 0.5rem black; /*Para poner sombra*/
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;   
+    padding: 0.3rem 0.6rem;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.5); /*Color de fondo de los enlaces de navegacion en blanco semitransparente*/
+
+}
+
+section { /*Estilos a las secciones*/
+    background-color: white;
+    box-shadow: 0 2px 4px black; /*Para poner sombra*/
+    border-radius: 8px;  /*Borde redondeado de las secciones*/
+    margin: 1rem 0; 
+    padding: 1rem;
+
+}
+
+section h2 {
+    color: #006699;
+    margin-bottom: 0.5rem;
+}
