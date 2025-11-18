@@ -1,3 +1,9 @@
+:root { /*Para definir variables*/
+    --primary-color: #076896; 
+    --primary-color_transparencia: #07689677; 
+    --boton_active: #004466;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.4;
@@ -34,7 +40,7 @@ nav a:hover {
 
 section { /*Estilos a las secciones*/
     background-color: white;
-    box-shadow: 0 2px 4px black; /*Para poner sombra*/
+    box-shadow: 0px 2px 4px black; /*Para poner sombra*/
     border-radius: 8px;  /*Borde redondeado de las secciones*/
     margin: 1rem 0; 
     padding: 1rem;
@@ -44,4 +50,43 @@ section { /*Estilos a las secciones*/
 section h2 {
     color: #006699;
     margin-bottom: 0.5rem;
+}
+
+/*Pseaudo clases*/
+
+.btn, .btn-sec {
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: white;
+    padding: 0.3rem 0.6rem;
+    margin: 0 0.1rem 0.6rem 0;
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.btn:hover, .btn-sec:hover { /*Estilo para cuando pasemos el cursor por los botones "Enlace interactivo y "Boton"*/
+    background-color: var(--primary-color_transparencia);
+    transition: background-color 0.5s;
+}
+
+.btn:active, .btn-sec:active { /*Estilos para que cuando cliquemos en el boton cambie ligeramente en el fondo*/
+    background-color: var(--boton_active);
+
+}
+
+input  {
+    border: 1px solid #999;
+    padding: 0.3rem;
+    margin-top: 0.3rem;
+    border-radius: 4px;
+
+}
+
+input:focus { /*Estilos para que cuando pinche en el input*/
+    outline: none; /*Quiamos el contorno por defecto que usa el navegador*/
+    border: 1px solid var(--primary-color);
+
+    
 }
