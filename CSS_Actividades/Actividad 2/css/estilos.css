@@ -2,6 +2,11 @@
     --primary-color: #076896; 
     --primary-color_transparencia: #07689677; 
     --boton_active: #004466;
+    --color-fondo-caja: #eaf6fb;
+    --color-bordes-caja: #006699;
+    --color-fondo-parrafo-contenedor: #f0fff0;
+    --color-bordes-caja2: #333; 
+
 }
 
 body {
@@ -67,8 +72,8 @@ section h2 {
 }
 
 .btn:hover, .btn-sec:hover { /*Estilo para cuando pasemos el cursor por los botones "Enlace interactivo y "Boton"*/
-    background-color: var(--primary-color_transparencia);
-    transition: background-color 0.5s;
+    background-color: var(--primary-color_transparencia); 
+    transition: background-color 0.5s; /*le ESTAMOS DICIENDO QU NOS HAGA UNA TRANSI
 }
 
 .btn:active, .btn-sec:active { /*Estilos para que cuando cliquemos en el boton cambie ligeramente en el fondo*/
@@ -90,3 +95,146 @@ input:focus { /*Estilos para que cuando pinche en el input*/
 
     
 }
+
+/* Lista (.lista-demo): primer elemento en negrita, color #004466, opacidad 1; los demás con
+opacidad 0.8 (y 1 al hacer hover). */
+/* Estilos para la lista */
+.lista-demo {
+    margin-top: 0.8rem;
+    padding-left: 1.2rem;
+
+}
+
+.lista-demo li {
+    margin: 0.2rem 0;
+    opacity: 0.8;
+
+}
+
+.lista-demo li:first-child { /*Aqui le decimos que de la lista con la clase lista-demo, de las etiquetas li que tenga coja la primera*/
+    font-weight: bold; /*La ponemos en negrita*/
+    color: var(--boton_active); /*Le ponemos de color el de la variable boton-active*/
+    opacity: 1;
+}
+
+.lista-demo li:hover {
+    opacity: 1;
+
+}
+
+/* 2. 2) Espaciado y bordes
+• A la clase .caja añade margin, padding y border visibles.
+• Un color de fondo suave.
+• (Opcional) un outline distinto para diferenciarlo del borde. 
+• Caja (.caja): fondo azul claro (#eaf6fb), borde 3px sólido #006699, bordes redondeados
+(8px), con 1rem de margen y 1rem de relleno.
+• Cuando se enfoca algo dentro (.caja:focus-within): outline discontínuo naranja.*/
+
+.caja {
+    background-color: var(--color-fondo-caja);
+    border: 3px solid var(--color-bordes-caja);
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 1rem;
+
+
+}
+
+/* 3. 3) Selectores combinados
+• Usa #contenedor > span para aplicar un estilo solo a los hijos directos del contenedor.
+• Usa #contenedor + p para aplicar un estilo al párrafo que está justo después del
+contenedor.
+
+• Para el span que es hijo directo de #contenedor → fondo azul muy claro (#d0f0f5), borde 1px
+sólido #006699, relleno 0.3rem, margen inferior 0.3rem.*/
+
+#contenedor > span { /*Le estamos diciendo que aplique estilos al primer span despues del id contenedor*/
+    display: inline-block;
+    background-color: var(--color-fondo-caja);
+    border: 1px solid var(--color-bordes-caja);
+    padding: 0.3rem;
+    margin-bottom: 0.3rem;
+
+}
+
+/* • Para el párrafo hermano inmediato de #contenedor → fondo verde claro (#f0fff0), borde
+izquierdo 4px sólido verde, relleno izquierdo 0.4rem.  */
+
+#contenedor + p { /*El + coge el hermano adyacente (el que esta justo despues) primero del contenedor, en este caso coge la p*/
+    background-color: var(--color-fondo-parrafo-contenedor);
+    border-left: 0.4rem solid green;
+    padding-left: 0.4rem;
+}
+
+/* 4. 4) Esquinas redondeadas
+• Muestra las 3 cajas (.b1, .b2, .b3) en fila.
+• Cada una debe tener color de fondo distinto y aplicar:
+1. .b1 → esquina superior izquierda redondeada.
+2. .b2 → esquina superior derecha redondeada.
+3. .b3 → todas las esquinas redondeadas.
+• Las cajas (.box) deben mostrarse en fila, usando float.
+Añade esta regla para incluir un elemento virtual después de los contenedores de las cajas
+
+
+/* Aplicar estilos comunes a las cajas */
+
+/* Tamaño: ancho 100px, alto 80px, borde 3px sólido #333, texto centrado vertical y horizontal.
+• Colores y radios:
+- .b1 → fondo rojo claro (#ff9999), solo esquina superior izquierda redondeada (16px).
+- .b2 → fondo amarillo (#ffcc66), solo esquina superior derecha redondeada (16px).
+- .b3 → fondo verde claro (#99cc99), todas las esquinas redondeadas (16px). */
+
+.box { /* Le estamos poniendo estilos a cada uno que tenga box*/
+    float: left;
+    margin: 0 20px;
+    width: 100px;
+    height: 80px;
+    border: 3px solid var(--color-bordes-caja2);
+    text-align: center;
+    line-height: 80px;
+    font-weight: bold;
+
+}
+
+/* • Colores y radios:
+- .b1 → fondo rojo claro (#ff9999), solo esquina superior izquierda redondeada (16px).
+- .b2 → fondo amarillo (#ffcc66), solo esquina superior derecha redondeada (16px).
+- .b3 → fondo verde claro (#99cc99), todas las esquinas redondeadas (16px). */ 
+
+.b1 {
+    background-color: #ff9999;
+    border-radius: 16px 0px 0px 0px;
+
+}
+
+.b2 {
+    background-color: #ffcc66;
+    border-top-right-radius: 16px;
+}
+
+.b3 {
+    background-color: #99cc99;
+    border-radius: 16px;
+}
+
+
+.fila::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Footer
+• Centra el texto.
+• Usa un fondo claro y un borde superior.
+• Tamaño de letra ligeramente más pequeño. */
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: #eee;
+    border-top: 3px solid var(--color-bordes-caja) ;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
