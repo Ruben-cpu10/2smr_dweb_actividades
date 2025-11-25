@@ -1,0 +1,58 @@
+:root {
+    --imagen_fondo: #f5fdb8;
+    --imagen_fondo_nav: #f1b7b7;
+}
+
+/* Todo el contenido de la página van a tener la propiedad box-sizing con el valor border-box. */
+body {
+    box-sizing: border-box;
+    margin: 0 auto; /*página centrada horizontalmente*/
+    background-color: var(--imagen_fondo);
+ 
+    
+}
+
+h1 {
+    font-family: Audiowide;
+    text-align: center;
+    color: blue;
+
+}
+
+/* Estilos al bloque entero de nav */
+nav {
+    border: none; /*Le indicamos borde ninguno*/
+    background-color: var(--imagen_fondo_nav); /*Clor de fondo*/
+    text-decoration: none;
+}
+
+/* Estilos a las listas del nav */
+nav ul {
+    list-style-type: none; /*Le quitamos los puntos (·) de las listas"*/
+    margin: 0; 
+    padding: 0;
+    text-decoration: none;
+}
+
+/*Le damos estilos a cada uno de los elementos de la ul*/
+nav ul li {
+    float: left; /*Le decimos que El elemento se pega al borde izquierdo y el contenido adyacente se coloca a su derecha.*/
+    margin-right: 20px;
+    padding: 20px;
+}
+
+
+/* Para crear un elemento fantasma justo despues del nav */
+nav::after {
+    content: ""; /*El contenido del elemento fantasma despues del nav le decimos que este vacío*/
+    display: table;
+    clear: left; /*le decimos que empiece debajo de elementos que flotaron a la izquierda.*/
+}
+    
+
+
+
+
+
+
+
