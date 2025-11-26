@@ -1,0 +1,118 @@
+/* Colores */
+:root {
+    --general_color: #00FFFF;
+    --background_color_boton: rgb(128, 128, 128, 0.2);
+    
+}
+
+/*Estilos Globales*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 900px;
+    margin: 20px auto 40px; /*Para poner margen arriba y abajo de la pagina*/
+
+}
+
+@keyframes prueba1 {
+    0% { /*Aqui decimos que se va ha hacer al inicio de la animacion*/
+        opacity: 0; /*Aqui decimo que al principioo no tiene opaciodad*/
+       transform: translateY(-100px); /*Sirve para hacer mover (en este caso con "translate"), pero tambien se puede girar con rotate*/
+    }
+    100% { /*Aqui definimos que va hacer al final de la animacion*/
+        opacity: 100;
+        transform: translateY(0px);
+}
+}
+
+/*Estilos al titulo principal*/
+header {
+    padding: 10px;
+    background-color: var(--general_color);
+    text-align: center;
+    margin-bottom: 20px; /*Margen de debajo del header*/
+    border-radius: 4px; /*Borde del cuadro del header*/
+    box-shadow:  0px 1px 8px 4px black; /*Para poner sombra*/
+    animation-name: prueba1;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+h1 {
+    color: white;
+    font-weight: 10px;
+    text-shadow: 2px 3px 4px black;
+    animation-name: prueba1;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes prueba2 {
+    0% {
+        opacity: 0px;
+    }
+}
+
+.imagen1 {
+    display: block; /*Convierte a la imagen en un elemento de bloque (ya que es de line), para que acepte los margenes*/
+    margin: 20px auto; /*Para poner la imagen centrada*/
+    border-radius: 10px; /*Borde de la imagen*/
+    box-shadow: 4px 4px 8px var(--general_color);/*Sombra del borde de la imagen*/
+    width: 300px; /*Tamaño de la imagen*/
+}
+
+.actividades {
+    border-style: none;
+    padding: 1px 15px;
+    border-radius: 4px;
+    border-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 10px 5px black ;
+    margin-bottom: 20px;
+}
+
+/*Estilos al h2 "2ºSMR- B Introducción al desarrollo web"*/
+.t1 {
+    text-shadow: 2px 1px 3px var(--general_color);
+}
+
+.encabezado1 {
+    display: inline-block;  /*Ponemos el h2 como bloque para que coja los estilos*/
+    margin-bottom: 1px;
+}
+
+.act {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem; /*Le ponemos margen de arriba*/
+    text-decoration: none; /*Le quitamos la decoracion del texto*/
+}
+
+/* Quita los números feos de la lista */
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+/*Para poner los enlaces como trajetas*/
+.act {
+    margin-left: 0.5rem;
+    background-color: white;
+    border-left: solid blue; /*Para poner el border en la izquierda*/
+    padding: 10px; /*Para que el texto este algo separado del borde*/
+    border-radius: 0.3rem; /*Para poner el borde redondeado*/
+    box-shadow: 0.2rem 0.2rem 0.5rem black;
+}
+
+.act:hover { /*Estilos cuando pasemos el raton por encima*/
+    background-color: var(--background_color_boton); /*Color de fondo el definido arriba*/
+    margin-left: 1rem; /* Le ponemos margen a la izq*/
+    margin-right: 0.5rem; /*Le ponemos margen a la  derecha*/
+    transition: 0.5s; /*Transición de lo puesto anterior de 0,5 seg*/
+}
+
