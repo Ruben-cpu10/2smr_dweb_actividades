@@ -28,7 +28,7 @@ header {
     border-bottom: 8px;
     border-radius: 0px 0 4px 4px;
     padding-top: 0.5px;
-    box-shadow:  0rem 0.2rem 0.5rem black; /*Para poner sombra*/
+    box-shadow:  0rem 0.3rem 0.5rem black; /*Para poner sombra*/
 }
 
 nav a {
@@ -136,8 +136,6 @@ opacidad 0.8 (y 1 al hacer hover). */
     border-radius: 8px;
     margin: 1rem;
     padding: 1rem;
-
-
 }
 
 /* 3. 3) Selectores combinados
@@ -209,7 +207,7 @@ Añade esta regla para incluir un elemento virtual después de los contenedores 
 
 .b2 {
     background-color: #ffcc66;
-    border-top-right-radius: 16px;
+    border-top-right-radius: 16px; /*Ora forma de poner una esquina redondeada*/
 }
 
 .b3 {
@@ -235,6 +233,7 @@ footer {
     background-color: #eee;
     border-top: 3px solid var(--color-bordes-caja) ;
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
 }
+
 

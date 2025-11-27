@@ -3,15 +3,17 @@
     --imagen_fondo_nav: #f1b7b7;
 }
 
+@import url(https://fonts.googleapis.com/css2?family=Audiowide&display=swap);
+
 /* Todo el contenido de la página van a tener la propiedad box-sizing con el valor border-box. */
 body {
-    box-sizing: border-box;
+    box-sizing: border-box;  
     margin: 0 auto; /*página centrada horizontalmente*/
-    background-color: var(--imagen_fondo);
+    background-color: var(--imagen_fondo); /*fondo de la pagina*/
  
     
 }
-
+ /*LE aplicamos estilos al h1*/
 h1 {
     font-family: Audiowide;
     text-align: center;
@@ -20,14 +22,16 @@ h1 {
 }
 
 /* Estilos al bloque entero de nav */
-nav {
+header nav {
     border: none; /*Le indicamos borde ninguno*/
     background-color: var(--imagen_fondo_nav); /*Clor de fondo*/
     text-decoration: none;
+    margin: 10px 30px 10px 10px; /*Le ponemos margen arriba de 10px y a la derecha e izq 30px*/
+
 }
 
 /* Estilos a las listas del nav */
-nav ul {
+header nav ul {
     list-style-type: none; /*Le quitamos los puntos (·) de las listas"*/
     margin: 0; 
     padding: 0;
@@ -35,20 +39,78 @@ nav ul {
 }
 
 /*Le damos estilos a cada uno de los elementos de la ul*/
-nav ul li {
+header nav ul li {
     float: left; /*Le decimos que El elemento se pega al borde izquierdo y el contenido adyacente se coloca a su derecha.*/
     margin-right: 20px;
     padding: 20px;
+
 }
 
+/*Estilos a los enlaces de los li*/
+header nav ul li a {
+    text-decoration: none;
+}
+
+/*Le damos estilos para cuando se pase el raton por encima de los li*/
+header nav ul li:hover {
+    background-color: #eeeeee;
+}
+
+/*Le damos estilos para cuando se pase el raton por encima de los li*/
+header nav ul li a:hover {
+    color: red;
+}
 
 /* Para crear un elemento fantasma justo despues del nav */
-nav::after {
+header nav::after {
     content: ""; /*El contenido del elemento fantasma despues del nav le decimos que este vacío*/
-    display: table;
+    display: table; /*Ponemos el elemento fantasma como tabal*/
     clear: left; /*le decimos que empiece debajo de elementos que flotaron a la izquierda.*/
 }
+
+/*Le ponemos al parrafo con el id destacado los estilos*/
+#destacado {
+    border: dashed orange;
+    background-color: #feffcd;
+    padding: 10px;
+    margin: 10px 30px 10px 10px; /*Le ponemos margen arriba de 10px y a la derecha e izq 30px*/
     
+}
+
+/*Estilos al div con clase "caja"*/
+.caja {
+    color: green;
+    border: blue solid;
+}
+
+/* Pseudoselector: primer párrafo dentro de .caja */
+.caja p:first-child {
+    font-weight: bold; /*Ponemos el texto en negrita*/
+    text-decoration: underline; /*Le ponemos el subrayado*/
+}
+
+/* Segundo párrafo dentro de la caja */
+.caja p:nth-of-type(2) {
+clear: both; /* fuerza a empezar debajo del flotado anterior */
+padding: 5px;
+}
+
+.centrado div:first-child {
+    float: left;
+    border: #f1b7b7 solid;
+}
+
+.centrado div:nth-of-type(2) {
+    float: right;   
+}
+
+.footer {
+    clear: both;
+}
+
+
+
+
 
 
 
