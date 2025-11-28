@@ -41,8 +41,7 @@ header nav ul {
 /*Le damos estilos a cada uno de los elementos de la ul*/
 header nav ul li {
     float: left; /*Le decimos que El elemento se pega al borde izquierdo y el contenido adyacente se coloca a su derecha.*/
-    margin-right: 20px;
-    padding: 20px;
+    padding: 16px 20px 16px 20px; /*Añadimos relleno entre los enlaces*/
 
 }
 
@@ -77,12 +76,6 @@ header nav::after {
     
 }
 
-/*Estilos al div con clase "caja"*/
-.caja {
-    color: green;
-    border: blue solid;
-}
-
 /* Pseudoselector: primer párrafo dentro de .caja */
 .caja p:first-child {
     font-weight: bold; /*Ponemos el texto en negrita*/
@@ -95,18 +88,62 @@ clear: both; /* fuerza a empezar debajo del flotado anterior */
 padding: 5px;
 }
 
-.centrado div:first-child {
-    float: left;
-    border: #f1b7b7 solid;
+.footer {
+    clear: both;
 }
 
+/* Estilos a los 2 textos que hay (div centrad */
+.centrado {
+    position: relative;
+    
+}
+
+/*Estilos a los div con clase "caja"*/
+.caja {
+    color: green;
+    border: blue solid;
+    margin-top: 50px;
+}
+
+.centrado div:first-of-type {
+    float: left; /*Le ponemos que flote a la izquierda*/
+    justify-content: center; /*Ponemos el contenido justificad*/
+    margin-left: 50px; /*Le ponemos margen izq para centar*/
+   
+    
+
+}
+
+/* Le damos estilos al segundo div dentro del div que tiene la clase centrado */
 .centrado div:nth-of-type(2) {
-    float: right;   
+     margin-right: 820px; /*Le ponemos margen derecho para centar*/
+    float: right; /*Le ponemos que sea un elemento flotante*/
+
+}
+
+/* Estilos a la imagen que va enla derecha (fondo blanco) */
+.derecha {
+    float: right; /*Le ponemos que flote a la derecha*/
+    width: 80px; /*Le ponemos anto y alto de 80px*/
+    margin-right: 20px; /*MArgen derechi*/
+    margin-bottom: 20px;
+}
+
+/* Estilos a la imagen que va a la izq (la azul) */
+.izquierda{
+    width: 80px;/*Le damos de alto y ancho 80px*/
+    margin-left: 10px; /*Le damos 10px de margen izq*/
+}
+
+.centrado div:nth-of-type(2) p:first-of-type{
+    
 }
 
 .footer {
     clear: both;
+    margin-top: 200px;
 }
+
 
 
 
