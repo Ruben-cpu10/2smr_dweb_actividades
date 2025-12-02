@@ -101,7 +101,7 @@ padding: 5px;
 /*Estilos a los div con clase "caja"*/
 .caja {
     color: green;
-    border: blue solid;
+    border: red solid;
     margin-top: 50px;
 }
 
@@ -135,8 +135,9 @@ padding: 5px;
     margin-left: 10px; /*Le damos 10px de margen izq*/
 }
 
-.centrado div:nth-of-type(2) p:first-of-type{
-    
+footer .footer {
+    display: inline-block;
+    margin-top: 20px;
 }
 
 
