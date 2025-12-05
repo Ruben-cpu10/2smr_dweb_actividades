@@ -7,11 +7,12 @@
 
 /* Todo el contenido de la página van a tener la propiedad box-sizing con el valor border-box. */
 body {
-    box-sizing: border-box;  
+    box-sizing: border-box;
     margin: 0 auto; /*página centrada horizontalmente*/
     background-color: var(--imagen_fondo); /*fondo de la pagina*/
- 
-    
+    width: 80%;
+
+
 }
  /*LE aplicamos estilos al h1*/
 h1 {
@@ -33,7 +34,7 @@ header nav {
 /* Estilos a las listas del nav */
 header nav ul {
     list-style-type: none; /*Le quitamos los puntos (·) de las listas"*/
-    margin: 0; 
+    margin: 0;
     padding: 0;
     text-decoration: none;
 }
@@ -73,13 +74,14 @@ header nav::after {
     background-color: #feffcd;
     padding: 10px;
     margin: 10px 30px 10px 10px; /*Le ponemos margen arriba de 10px y a la derecha e izq 30px*/
-    
+
 }
 
 /* Pseudoselector: primer párrafo dentro de .caja */
 .caja p:first-child {
     font-weight: bold; /*Ponemos el texto en negrita*/
     text-decoration: underline; /*Le ponemos el subrayado*/
+    
 }
 
 /* Segundo párrafo dentro de la caja */
@@ -88,37 +90,31 @@ clear: both; /* fuerza a empezar debajo del flotado anterior */
 padding: 5px;
 }
 
-.footer {
-    clear: both;
-}
-
-/* Estilos a los 2 textos que hay (div centrad */
-.centrado {
-    position: relative;
-    
-}
 
 /*Estilos a los div con clase "caja"*/
 .caja {
     color: green;
-    border: red solid;
-    margin-top: 50px;
+    border: blue solid;
+    margin: 15px;
+    vertical-align: middle; /*Para qwue las cajas se pongan alineadas en el medio verticalmente*/
+    display:inline-block; /*ponemos esto para que las 2 cajas se ponga una al lado de otra*/
+    padding: 10px; /*le ponemos un relleno*/
 }
 
+.centrado {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+/* El primer div dentro de .centrado */
 .centrado div:first-of-type {
-    float: left; /*Le ponemos que flote a la izquierda*/
     justify-content: center; /*Ponemos el contenido justificad*/
     margin-left: 50px; /*Le ponemos margen izq para centar*/
-   
-    
-
 }
 
 /* Le damos estilos al segundo div dentro del div que tiene la clase centrado */
 .centrado div:nth-of-type(2) {
-     margin-right: 820px; /*Le ponemos margen derecho para centar*/
-    float: right; /*Le ponemos que sea un elemento flotante*/
-
+    
 }
 
 /* Estilos a la imagen que va enla derecha (fondo blanco) */
@@ -133,13 +129,19 @@ padding: 5px;
 .izquierda{
     width: 80px;/*Le damos de alto y ancho 80px*/
     margin-left: 10px; /*Le damos 10px de margen izq*/
+    vertical-align: top;
 }
 
-footer .footer {
-    display: inline-block;
-    margin-top: 20px;
+/* Estilos al footer, para que este debajo */
+footer p:last-child {
+    font-style: italic;
+    color: grey;
+   
 }
 
+aside {
+    float: right;
+}
 
 
 
