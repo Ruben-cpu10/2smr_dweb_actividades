@@ -1,0 +1,37 @@
+
+
+body {
+    background-image: url(./img/fondo_header.jpg);
+}
+
+/* Estilos a los navegadores */
+.navegadores {
+    display: flex; /*Ponemos como flex*/
+    justify-content: space-between; /*Le indicamos la separación que queremos entre los navs que haya*/
+    margin-left: 100px; /*Margen izq del bloque entero de los navs*/
+    margin-right: 100px; /*Margen izq del bloque entero de los navs*/
+}
+
+/* Estilos a el nav de navegacion */
+.navegación{
+
+}
+
+/* Estilos a los enlaces del nav "navegación"  */
+.navegación a {
+    color: white; /*Color de la letra*/
+    text-decoration: none; /*Le quitamos el subrayado*/
+    margin-left: 100px; /*Margen izq entre los enlaces*/
+    margin-right: 100px; /*Margen izq entre los enlaces*/
+    }
+
+.logo {
+    display: flex;
+    flex-grow: ;
+}
+
+.redes_sociales {
+    display: flex;
+    
+}
+
