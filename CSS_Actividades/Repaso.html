@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+     <div class="mi_container">
+    <header>
+        <h1>Repaso HTML</h1>
+    </header>
+    <section class="formulario1">
+        <h2>Repaso de Formularios</h2>
+        <label class="usuario" for="user">Usuario</label>
+        <br>
+        <input type="text" placeholder="Nombre de Usuario">
+        <br>
+        <label class="contraseña" for="password">Contraseña</label>
+        <br>
+        <input type="password" placeholder="Contraseña">
+        <br>
+        <button>Enviar</button>
+    </section>
+
+
+
+    <section class="formulario1">
+        <h2>Repaso de Formularios</h2>
+        <label class="usuario" for="user">Usuario</label>
+        <br>
+        <input type="text" placeholder="Nombre del viajero">
+        <br>
+        <label class="pasaje">Tipo de pasaje</label>
+        <select name="pasaje" required>
+            <option value="0"> Vip</option>
+            <option value="1"> Especial</option>
+            <option value="2"> Primera</option>
+            <option value="3"> Segunda</option>
+
+        </select>
+        <br>
+        <button>Enviar</button>
+        <br>
+        <br>
+        <br>
+    </section>
+ <label class="artitculo" for="articulo">Artículo</label>
+     <br>
+        <input type="text" placeholder="Artículo">
+        <br>
+        <label class="forma_entrega" for="Forma de forma_entrega">Artículo</label>
+        <br>
+        <label>Envio a domicilio</label>
+        <input type="radio" name="forma_entrega" value="domicilio" required>
+        <br>
+        <label>Recogida en tienda</label>
+        <input type="checkbox" name="recogida_en_tienda" value="recogida_en_tienda" required>
+        <br>
+        <button>Enviar</button>
+        <br>
+        <br>
+        <label>TextArea</label>
+        <br>
+        <textarea name="mensaje" cols="60" rows="10">Escribe tu mensaje</textarea>
+     <br>
+     <br>
+     <br>
+      <label>Número de botellas (en lotes de 3) </label>  
+    <input type="number" id="cantidad" name="cantidad" placeholder="botellas" min="3" step="3" required >
+    <input type="submit" value="Enviar">  
+  </form>
+
+    </div>
+</body>
+</html>

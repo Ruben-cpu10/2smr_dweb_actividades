@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos al contenedor de la pagina entera */
+.contenedor_pag {
+    position: relative; /* Para controlar al hijo */
+    /* Ya no lleva background ni clip-path aquí */
+}
+
+.contenedor_pag::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Aquí van las propiedades "peligrosas" */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), /* Capa negra al 60% */
+        url(./img/fondo_header.jpg); /* Tu imagen original */
+    clip-path: polygon(100% 0, 100% 0, 100% 85%, 50% 95%, 0 85%, 0 0);
+    z-index: -1; /* Se manda al fondo para no tapar el texto */
+    background-size: cover;
+}
+
+.mi_contenedor {
+    height: 100%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+/*Estilos a las imagenes */
+img {
+    width: 50px;
+    
+}
+
+/* Estilos a los 3 navegadores*/
+.navegadores {
+    display: flex; /* lo ponemos como un contenedor flexbox */
+    justify-content: space-evenly; /* le ponemos espacio dividido */
+    align-items: center;    
+
+}
+
+.redes_sociales {
+    flex-grow: 1;
+    
+}
+
+.redes_sociales img {
+    width: 25%;
+}
+
+/* Estilos al navegador navegación */
+.navegación {
+    display: flex;  /* lo ponemos flexbox */
+    justify-content: space-evenly; /* le ponemos que tenga el mismo espcaio de dere/izq */
+    flex-grow: 10; /* le ponemos que crezca*/
+    
+}
+
+/* estilos a los enlaces de navegación*/
+.navegación a {
+    text-decoration: none; /* quitamos el subrayado de los enlaces */
+    color: white; /* color del texto blanco */
+    font-size: 20px;
+
+}
+
+/*Estilos a Inicio (h1, p y boton) */
+.Inicio {
+    color: white;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 70vh;
+    max-width: 1200px;
+    width: 100%;
+    padding: 50px 0
+    
+    
+}
+
+/* estilos a titulo, parrafo y el boton de manera individual dentro de inicio */
+.Inicio .titulo, .parrafo, .boton {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* estilos a titulo dentro de inicio */
+.Inicio .titulo {
+    font-size: 60px;
+}
+
+/* estilos a parrafo dentro de inicio */
+.Inicio .parrafo {
+    font-size: 25px;
+    line-height: auto;
+}
+
+.Inicio .boton {
+    text-decoration: none; /* quitamos el subrayado de decoracion */
+    color: white; /* color de la letra */
+    background-color: blue; /* color de fondo */
+    align-self: center; /* para alinearlo de manera centrada a el solo */
+    border-radius: 30px; /* radio del borde */
+    padding: 15px 32px; /* padding de 10px arriba/abajo y 30px izq/dere*/
+    font-size: 20px; /* tamaño de la letra */
+
+}
+
+
+
+
+
+
+
+
+
+
+

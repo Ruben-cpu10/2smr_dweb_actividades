@@ -1,0 +1,59 @@
+:root {
+
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+}
+
+/* Estilos a todos los navegadores */
+.navegadores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1700px;
+    padding: 20px;
+}
+
+.navegadores a {
+    color: grey;
+    text-decoration: none;
+}
+
+.login_register {
+    display: flex;
+    flex-grow: 0.6;
+    justify-content: flex-end;
+    align-items: center;
+    
+
+}
+
+.register  a{
+    margin-left: 50px;
+    border: solid grey;
+    border-radius: 10px;
+    padding: 9px 15px;
+    align-self: center;
+    border-radius: 15px;
+}
+
+.inicio {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+
+.imagen_principal {
+    width: 500px;
+}
+

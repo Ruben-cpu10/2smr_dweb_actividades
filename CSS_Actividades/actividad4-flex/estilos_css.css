@@ -1,37 +1,109 @@
-
+:root {
+    --background_color_boton1: #0000fe;
+}
 
 body {
-    background-image: url(./img/fondo_header.jpg);
+    background-image:url(./img/fondo_header.jpg);
+    background-image: linear-gradient(
+        180deg,
+        rgba (0, 0, 0, 0, 0.25) 0%,
+        rgba (0, 0, 0, 0, 0.5) 0%);
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    background-color: blue; /* TEMPORAL */
+    border: 2px solid yellow; /* TEMPORAL */
+
 }
 
-/* Estilos a los navegadores */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ /* Estilos a la imgane del logo */
+.navegadores img {
+    height: 80px; /* Alto de la imagen */
+    width: 80px; /* ancho del logo */
+}
+
+
+/* Estilos a los 3 menus */
 .navegadores {
-    display: flex; /*Ponemos como flex*/
-    justify-content: space-between; /*Le indicamos la separación que queremos entre los navs que haya*/
-    margin-left: 100px; /*Margen izq del bloque entero de los navs*/
-    margin-right: 100px; /*Margen izq del bloque entero de los navs*/
-}
-
-/* Estilos a el nav de navegacion */
-.navegación{
-
-}
-
-/* Estilos a los enlaces del nav "navegación"  */
-.navegación a {
-    color: white; /*Color de la letra*/
-    text-decoration: none; /*Le quitamos el subrayado*/
-    margin-left: 100px; /*Margen izq entre los enlaces*/
-    margin-right: 100px; /*Margen izq entre los enlaces*/
-    }
-
-.logo {
-    display: flex;
-    flex-grow: ;
-}
-
-.redes_sociales {
-    display: flex;
+    display: flex; /* Lo ponemos que se uan contenedor flex */
+    align-items: center; /* Alineamos lo items en el centro */
+    justify-content: space-around; /* Le ponemos que tenga nel mismo espacio en izq/dere */
     
 }
+
+/* Estilos al menu de navegación */
+.navegación {
+    display: flex; /* lo ponemos el contenedro tipo flex */
+    flex-grow: 0.7; /* le hacemos que el contenedor crezca */
+    justify-content: space-around;  /* le ponemos que tenga el mismo espacio en dere e izq */
+}
+ 
+
+/* Estilos al los enlaces del menu de navegación */
+.navegación a {
+    text-decoration: none; /* le quitamos el subrayado de los enlaces */
+    display: flex; /* lo ponemos como flex */ 
+    justify-content: space-around; /* justificacion del contrnido que tengan el mismo espoacio de dere e izq */
+    color: white; /* color del texto blanco */
+}
+
+
+/* Estilos a al texto de "Inicio" */
+.inicio {
+    background-color: lue;
+    text-align: center; /* Alineación del texto */
+    display: flex; /* l eponemos que sea tipo flexible */
+    flex-direction: column; /* dirección del flex en columna */
+    align-items: center;
+    height: 80vh; /* le indicamos la altura del contenedor */  
+    justify-content: center; /* justificacion del contenido centrado */
+    color: white; /* color del texto */
+   
+}
+ /* Estilos al h1 dentro de inicio */
+.inicio h1 {
+    font-size: 50px; /* tamaño de la letra */
+}
+
+/*Estilos al cuerpo dentro de inicio*/
+.inicio .cuerpo {
+    font-size: 30px; 
+    justify-content: center;
+}
+
+/* Estilos al boton */
+.boton1 {
+    background-color: var(--background_color_boton1); /* color del fondo del boton */
+    padding: 20px 30px; /* 20px de relleno de arriba/abajo y 30px de izq/dere */
+    border-radius: 30px; /* radio del borde de 30px */
+}
+
+
+/*Estilos al texto del boton*/
+.boton1 a {
+    color: white; /* Color del texto blanco */
+    text-decoration: none; /* Le quitamos el subrayado del enlace */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
