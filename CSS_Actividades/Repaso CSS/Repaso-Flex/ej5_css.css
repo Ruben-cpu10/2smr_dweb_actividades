@@ -1,0 +1,40 @@
+body {
+    padding: 20px;
+}
+
+.main {
+    display: flex;
+    background-color: aqua;
+    height: 100vh;
+    border: solid;
+}
+
+.izquierda {
+    display: flex;
+    flex: 2;
+    background-color: blue;
+    padding: 12px;
+}
+
+.derecha {
+    display: flex;
+    flex-direction: column;
+
+    padding: 12px;
+    border: solid;
+}
+
+.derecha, .columna_dere_1, .columna_dere_2 {
+    display: flex;
+    flex: 1;
+    
+ }
+
+
+.columna_dere_1, .columna_dere_2 {
+    border: solid;
+}
+
+.columna_dere_1 {
+    flex: ;
+}

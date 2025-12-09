@@ -1,0 +1,23 @@
+.main {
+
+    display: flex;
+    gap: 2px;  
+    height: 100vh;
+  }
+
+.main .sidebar,
+.main .contenido {
+    padding: 12px 24px;
+    
+
+}
+
+.main .sidebar {
+    background-color: antiquewhite;
+}
+
+.main .contenido {
+    background-color: bisque;
+    display: flex;
+    flex-grow:  4;
+}

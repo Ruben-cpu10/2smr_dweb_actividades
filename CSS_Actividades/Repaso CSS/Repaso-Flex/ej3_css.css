@@ -1,0 +1,42 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px gray;
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 300px;
+}
+
+.title {
+    color: white;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    
+    
+}
+
+title {
+    align-self: center;
+}
+
+.cuerpo {
+    display: flex;
+    flex: 4;
+    padding: 8px;
+    border-bottom: solid 1px gray;
+
+}
+
+
+.pie {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    color: white;
+    background-color: lightgrey;
+    text-align: center;
+}
+
