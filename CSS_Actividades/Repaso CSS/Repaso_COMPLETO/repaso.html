@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes Maestros CSS - Examen (Versión Final)</title>
+    <style>
+        /* =======================================================
+           ESTILOS DE LA PÁGINA
+           ======================================================= */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 40px; }
+        
+        .tarjeta-estudio {
+            background: white;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-left: 8px solid #3498db;
+        }
+
+        .tarjeta-consejos {
+            background: #fff3cd; /* Color amarillento de aviso */
+            border-left: 8px solid #ffc107;
+        }
+
+        h2 { color: #2980b9; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px; }
+        h3 { color: #e67e22; margin-top: 25px; margin-bottom: 10px; }
+        p { line-height: 1.6; margin-bottom: 10px; }
+        
+        .codigo-nota {
+            background-color: #2d3436;
+            color: #55efc4;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: monospace;
+            display: block;
+            margin: 10px 0;
+            white-space: pre-wrap;
+        }
+
+        .error-texto { color: red; text-decoration: line-through; }
+        .acierto-texto { color: green; font-weight: bold; }
+
+        /* CLASES PARA LOS EJEMPLOS VISUALES */
+        .btn-hover {
+            padding: 10px 20px;
+            background-color: navy;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-hover:hover { background-color: red; transform: scale(1.1); }
+
+        .caja-modelo {
+            width: 100%; max-width: 300px; padding: 20px; margin: 10px 0;
+            border: 5px solid #333; border-radius: 15px; background-color: #fab1a0;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.3); text-align: center;
+        }
+
+        .flex-fila {
+            display: flex; flex-direction: row; justify-content: space-between;
+            align-items: center; gap: 10px; background: #2d3436; padding: 10px; height: 100px;
+        }
+        .caja-hijo { background: orange; padding: 10px; color: white; font-weight: bold; }
+        .caja-hijo-grow { background: crimson; flex: 1; text-align: center;}
+
+    </style>
+</head>
+<body>
+
+    <h1>📚 Guía de Estudio: Fallos y Soluciones</h1>
+
+    <div class="tarjeta-estudio">
+        <h2>1. Etiquetas HTML Típicas</h2>
+        <p>Los ladrillos básicos.</p>
+        <ul>
+            <li><strong>&lt;div&gt;</strong>: La caja comodín.</li>
+            <li><strong>&lt;nav&gt;</strong>: Úsala SIEMPRE para envolver los enlaces del menú.</li>
+            <li><strong>&lt;section&gt;</strong>: Para dividir la web en bloques grandes.</li>
+            <li><strong>&lt;h1&gt; a &lt;h6&gt;</strong>: Títulos.</li>
+            <li><strong>&lt;p&gt;</strong>: Párrafos.</li>
+            <li><strong>&lt;img&gt;</strong>: Imágenes.</li>
+        </ul>
+    </div>
+
+    <div class="tarjeta-estudio">
+        <h2>2. Seudoclases (Interacción)</h2>
+        <ul>
+            <li><code>:hover</code> → Ratón por encima.</li>
+            <li><code>:active</code> → Al hacer clic.</li>
+        </ul>
+        <button class="btn-hover">Pásame el ratón</button>
+    </div>
+
+    
+    <div class="tarjeta-estudio">
+        <h2>3. Estilos Típicos (Modelo de Caja)</h2>
+        <ul>
+            <li><code>padding</code>: <strong>Relleno interno</strong>.</li>
+            <li><code>margin</code>: <strong>Espacio externo</strong>.</li>
+            <li><code>border-radius</code>: Redondea esquinas.</li>
+            <li><code>box-shadow</code>: Sombra.</li>
+        </ul>
+        <div class="caja-modelo">Soy una caja con Padding y Borde</div>
+    </div>
+
+    
+    <div class="tarjeta-estudio">
+        <h2>4. Flexbox (Colocación)</h2>
+        <h3>EN EL PADRE:</h3>
+        <ul>
+            <li><code>display: flex;</code>: <strong>Obligatorio</strong>.</li>
+            <li><code>justify-content: space-between;</code>: A los extremos.</li>
+            <li><code>align-items: center;</code>: Centrado vertical.</li>
+            <li><code>gap: 10px;</code>: Hueco.</li>
+        </ul>
+        <h3>EN EL HIJO:</h3>
+        <ul>
+            <li><code>flex: 1;</code>: Ocupa el espacio sobrante.</li>
+        </ul>
+        <div class="flex-fila">
+            <div class="caja-hijo">1</div>
+            <div class="caja-hijo caja-hijo-grow">flex: 1</div>
+            <div class="caja-hijo">3</div>
+        </div>
+    </div>
+
+    <div class="tarjeta-estudio" style="border-left-color: red;">
+        <h2 style="color: red;">5. Tus Fallos Reales y Solución</h2>
+        
+        <h3>Fallo A: El misterio de la Mayúscula 🕵️‍♂️</h3>
+        <p><strong>El problema:</strong> Escribiste la clase con mayúscula en HTML pero minúscula en CSS.</p>
+        <p>HTML: <code>&lt;div class="Derecha"&gt;</code></p>
+        <p>CSS: <span class="error-texto">.derecha { ... }</span> (El navegador NO lo encuentra).</p>
+        <p><strong>Solución:</strong> <span class="acierto-texto">.Derecha { ... }</span> (Deben ser idénticos).</p>
+
+        <h3>Fallo B: Flexbox no se hereda 👻</h3>
+        <p><strong>El problema:</strong> Pusiste <code>display: flex</code> en el ABUELO y esperabas que los NIETOS se pusieran en fila.</p>
+        <p><strong>La regla:</strong> Flexbox solo manda a los HIJOS DIRECTOS.</p>
+        <p><strong>Solución:</strong> Si quieres alinear los textos de dentro, tienes que poner <code>display: flex</code> TAMBIÉN en su padre directo (la caja .Derecha).</p>
+
+        <code class="codigo-nota">
+/* CSS CORRECTO PARA TU CASO */
+.Derecha {
+    display: flex;       /* Activamos flex en este contenedor */
+    flex-direction: column; /* Para que los textos bajen */
+}
+        </code>
+    </div>
+
+    <div class="tarjeta-estudio tarjeta-consejos">
+        <h2 style="color: #856404;">6. Consejos para que no te vuelva a pasar</h2>
+        
+        <p><strong>1. Usa siempre minúsculas:</strong></p>
+        <p>Acostúmbrate a escribir TODAS las clases en minúscula en HTML y CSS. Así nunca tendrás el error de la mayúscula. Ej: <code>class="columna-derecha"</code>.</p>
+
+        <p><strong>2. La regla del "Padre Directo":</strong></p>
+        <p>Si algo no se mueve como quieres, pregúntate: <em>"¿Le he puesto display:flex a su padre inmediato?"</em>.</p>
+
+        <p><strong>3. Usa colores chillones para probar:</strong></p>
+        <p>Si no sabes qué está pasando, ponle <code>background-color: red;</code> a la caja. Así verás cuánto mide y dónde está realmente.</p>
+
+        <p><strong>4. El Reset siempre lo primero:</strong></p>
+        <p>No empieces a escribir nada sin poner esto arriba del todo:</p>
+        <code class="codigo-nota" style="background: #fff; color: #333; border: 1px solid #ccc;">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        </code>
+    </div>
+
+</body>
+</html>
