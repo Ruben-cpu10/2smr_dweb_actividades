@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activiada 5 - Formularios</title>
+    <style>
+        selector {
+            /* Comentarios */
+            propiedad: valor;
+        }
+        h1 {
+            color:red;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+        .cabecera {
+            color: blue;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        #username {
+            border-radius: 5px;
+            background-color: aqua;
+            padding: 10px;
+        }
+        li {
+            background-color: antiquewhite;
+            float: left;
+            margin-left: 20px;
+        }
+        
+        main {
+            clear: both;
+            margin-top: 100px;;
+        }
+        
+
+    </style>
+</head>
+<body>
+  
+    <header>
+        <h1>Actividad 5 - Formularios en HTML</h1>
+    </header>
+      <nav>
+        <ul>
+            <li class="Enlace1">Enlace1</li>
+            <li>Enlace1</li>
+            <li>Enlace1</li>
+            
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <form action="" method="post" > <!--method es la forma en la que queremos enviar los datos al servidor-->
+                <fieldset> <!-- Es como una agrupacion de datos relacionados entre si-->
+                    <legend>Datos Personales</legend>   
+                    <label for="username" class="cabecera">Nombre</label>
+                    <!-- El for: Sirve para que al hacer click en "Nombre" se le vaya y seleecione el formulario al rellenar, se relaciona con el input-->
+                    <input type="text" name="userName" id="username" autofocus required> <!--Input type es para definir el tipo de contenido que va ha haber dentro-->
+                    <!--Input name ..-->
+                    <!--Input id identifica a este elemento de forma unica en el documento HTML *NO PUEDE HABER 2 ID MISMOS-->
+                    <!--El autofocus required es para que en la pagina se te ponga como foco ese campo y lo pone como campo OBLIGATORIO-->
+                    <br> 
+                    <br> 
+                    <label for="email" class="cabecera">Correo Electronico</label> 
+                     <input type="email" name="userName" id="email">                      
+                    <br>
+                    <br>
+                     <label for="url">URL</label> 
+                     <input type="url" name="url" id="url">                      
+                    <br>   
+                    <br>
+                    <label for="ciudad">Ciudad</label>   
+                    <select name="ciudad" id="ciudad">
+                        <option value="CO"> Córdoba</option>
+                        <option value="SE"> Sevilla</option>
+                        <option value="JA"> Jaén</option>
+                        <option value="CA"> Cádiz</option>
+                        <option value="AL"> Almería</option>
+                        <option value="MA"> Málaga</option>
+                        <option value="CO"> Córdoba</option>
+                        </select>
+                    <!--Option: Para poner las diferentes opciones de las listas desplegables-->
+                    <!--El VALUE es lo que va a recivir el servidor al que le llegar; le va a llegar ciudad="CO"-->
+                   <br>
+                   <br>
+                  
+                    <datalist id="ciudad2">
+                         <option value="CO"> Córdoba</option>
+                        <option value="SE"> Sevilla</option>
+                        <option value="JA"> Jaén</option>
+                        <option value="CA"> Cádiz</option>
+                    </datalist>
+                    <!--Lo mismo que el Select pero mejor-->
+                      <label for="ciudad2">Ciudad2 </label>
+                    <input list="ciudad2" name="ciudad2" id="ciudad2">
+                </fieldset>
+                    <br>
+                <fieldset>
+                    <legend>Otros</legend>  
+                    <label for="date">Fecha</label>
+                    <input type="date" name="date" id="date">
+                    <br>
+                    <br>
+                    <label for="tiempo">Tiempo</label>
+                    <input type="datetime-local" name="date" id="tiempo">
+                    <br>
+                    <br>
+                    <label for="mes">Mes</label>
+                    <input type="month" name="mes" id="mes">
+                    <br>
+                    <br>
+                    <label for="semana">Semana</label>
+                    <input type="week" name="Semana" id="semana">
+                    <br>
+                    <br>
+                    <label for="numero">Numero -10 +10</label>
+                    <input type="number" min="-10" max="10" name="numero" id="numero">
+                </fieldset>    
+                <br>
+                <fieldset>
+                    <legend>Controles</legend>
+                    <label>Aficiones</label>
+                    <input type="checkbox" name="cine" id="cine"><label for="cine">Cine</label>
+                    <input type="checkbox" name="deportes" id="deportes"><label for="deportes">Deportes</label>
+                    <p>Forma de Pago</p>
+                    <input type="radio" name="formapago" id="visa"><label for="visa">Visa</label>
+                    <input type="radio" name="formapago" id="aexpress"><label for="aexpress">American Express</label>
+                    <input type="radio" name="formapago" id="mastercard"><label for="mastercard">Mastercard</label>
+                </fieldset>
+
+                <input type="submit" value="Enviar">
+                <!--El submit es un boton como para enviar el action (puesto al principio debajo del section) a un servidor o algo-->
+                <!--El value es oara ponerle nombre al boron ese-->
+            </form>
+
+        </section>
+
+
+    </main>
+    <footer>
+        <small>Copyright - Rubén Torralbo Molina&copy;</small>
+    </footer>
+    
+</body>
+</html>

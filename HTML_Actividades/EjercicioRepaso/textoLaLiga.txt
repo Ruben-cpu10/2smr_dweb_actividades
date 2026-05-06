@@ -1,0 +1,34 @@
+
+Ficha Temática: Liga Española
+Competición y Clubes
+Introducción | Comparativa | Más Recursos
+Introducción
+
+La Liga Española es el campeonato nacional de fútbol de primera división en España. Esta ficha organiza información clave y una tabla con colspan y rowspan.
+
+Logotipo o imagen temática de LaLiga
+Especificaciones Clave
+
+    Equipos: 20 clubes.
+    Formato: Temporada a doble vuelta.
+        3 puntos por victoria y 1 por empate.
+        Descenso de 3 equipos.
+    Clasificación: Puestos europeos y descenso.
+    Reglamento: FIFA/IFAB.
+
+Comparativa Rápida
+
+Tabla ejemplo con combinación de celdas.
+Resumen Sintético de Clubes
+Club 	Métrica 	Valor
+Real Madrid 	Puntos (muestra) 	85
+Racha 	V-V-E 	Últ. 3
+FC Barcelona 	Puntos (muestra) 	80
+Racha 	E-V-V 	Últ. 3
+Atlético 	Puntos (muestra) 	74
+Racha 	V-E-V 	Últ. 3
+Más Recursos
+
+Consulta la página oficial para más información.
+
+© 2025 Actividad HTML SMR — Liga | Volver al inicio

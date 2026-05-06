@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- La etiqueta <head> contiene información para el navegador que no se ve en la página. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- La etiqueta <title> define el título que aparece en la pestaña del navegador. -->
+    <title>Guía de Etiquetas HTML</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 25px; }
+        h1, h2 { border-bottom: 2px solid #007BFF; padding-bottom: 5px; }
+        h3 { color: #0056b3; }
+        code { background-color: #f4f4f4; padding: 2px 5px; border-radius: 4px; font-family: monospace; }
+        blockquote { border-left: 4px solid #ccc; padding-left: 15px; font-style: italic; }
+        table { border-collapse: collapse; width: 50%; margin-top: 15px;}
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left;}
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+
+<body>
+    <!-- La etiqueta <body> contiene todo el contenido visible de la página web. -->
+
+    <h1>Guía Completa de Etiquetas HTML con Ejemplos</h1>
+    <p>Este documento explica el uso de las etiquetas HTML más comunes con ejemplos claros.</p>
+
+    <hr>
+
+    <h2>Texto y Párrafos</h2>
+
+    <h3>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt; - Títulos</h3>
+    <p>Sirven para definir títulos y subtítulos. <strong>&lt;h1&gt;</strong> es el más importante y <strong>&lt;h3&gt;</strong> es de menor rango.</p>
+    <p><em>Ejemplo 1: Jerarquía de un documento.</em></p>
+    <h1>Título Principal del Artículo</h1>
+    <h2>Un subtítulo importante</h2>
+    <h3>Un punto específico dentro del subtítulo</h3>
+    <p><em>Ejemplo 2: Título de una receta.</em></p>
+    <h2>Receta de Tortilla de Patatas</h2>
+    <h3>Ingredientes</h3>
+    
+    <h3>&lt;p&gt; - Párrafo</h3>
+    <p>Crea un bloque de texto separado, es decir, un párrafo.</p>
+    <p><em>Ejemplo 1:</em></p>
+    <p>Este es un párrafo de texto que explica un concepto. Es la etiqueta más común para escribir texto.</p>
+    <p><em>Ejemplo 2:</em></p>
+    <p>Aquí comienza otro párrafo. Los navegadores añaden un espacio entre párrafos automáticamente.</p>
+    
+    <h3>&lt;strong&gt; y &lt;b&gt; - Negrita</h3>
+    <p><strong>&lt;strong&gt;</strong> se usa para indicar que un texto es muy importante. <strong>&lt;b&gt;</strong> solo pone el texto en negrita por estilo, sin darle importancia.</p>
+    <p><em>Ejemplo 1 (strong):</em></p>
+    <p><strong>Advertencia:</strong> No desenchufar el equipo durante la actualización.</p>
+    <p><em>Ejemplo 2 (b):</em></p>
+    <p>El término clave de hoy es <b>API (Application Programming Interface)</b>.</p>
+
+    <h3>&lt;em&gt; y &lt;i&gt; - Cursiva</h3>
+    <p><strong>&lt;em&gt;</strong> se usa para dar énfasis a una palabra. <strong>&lt;i&gt;</strong> se usa para palabras en otro idioma, nombres técnicos o de barcos, solo por estilo.</p>
+    <p><em>Ejemplo 1 (em):</em></p>
+    <p>Estás <em>totalmente</em> equivocado.</p>
+    <p><em>Ejemplo 2 (i):</em></p>
+    <p>La expresión latina <i>carpe diem</i> significa "aprovecha el momento".</p>
+    
+    <hr>
+
+    <h2>Saltos y Separadores</h2>
+
+    <h3>&lt;br&gt; - Salto de línea</h3>
+    <p>Fuerza un salto de línea dentro de un texto, sin crear un nuevo párrafo.</p>
+    <p><em>Ejemplo 1: Dirección postal.</em></p>
+    <p>Calle de la Alegría, 24<br>28012, Madrid<br>España</p>
+    <p><em>Ejemplo 2: Poesía.</em></p>
+    <p>Caminante, son tus huellas<br>el camino y nada más;</p>
+
+    <h3>&lt;hr&gt; - Línea horizontal</h3>
+    <p>Crea una línea horizontal para separar contenidos de forma temática.</p>
+    <p><em>Ejemplo 1: Separar secciones. (Ya la hemos usado arriba y la usaremos abajo)</em></p>
+    <p><em>Ejemplo 2: Separar el final de un artículo de los comentarios.</em></p>
+    <h4>Fin del artículo.</h4>
+    <hr>
+    <h4>Comentarios:</h4>
+
+    <hr>
+
+    <h2>Citas</h2>
+
+    <h3>&lt;blockquote&gt; - Bloque de Cita</h3>
+    <p>Se usa para citas largas que ocupan su propio párrafo. El navegador suele añadirle un margen.</p>
+    <p><em>Ejemplo 1:</em></p>
+    <blockquote>
+        La imaginación es más importante que el conocimiento. El conocimiento es limitado, mientras que la imaginación abarca el mundo entero.
+    </blockquote>
+    <p><em>Ejemplo 2:</em></p>
+    <blockquote>
+        Esto es una cita larga sacada de un libro, y por eso ocupa su propio espacio en la página.
+    </blockquote>
+    
+    <h3>&lt;q&gt; - Cita corta</h3>
+    <p>Para citas cortas que van dentro de un párrafo. El navegador añade las comillas automáticamente.</p>
+    <p><em>Ejemplo 1:</em></p>
+    <p>Como dijo mi abuelo, <q>nunca es tarde si la dicha es buena</q>.</p>
+    <p><em>Ejemplo 2:</em></p>
+    <p>Ella me miró y me dijo <q>no puedo creerlo</q>.</p>
+
+    <h3>&lt;cite&gt; - Citar una obra</h3>
+    <p>Se usa para nombrar el título de una obra (un libro, una película, una canción...).</p>
+    <p><em>Ejemplo 1:</em></p>
+    <p>Mi libro favorito es <cite>El Señor de los Anillos</cite>.</p>
+    <p><em>Ejemplo 2:</em></p>
+    <p>La famosa pintura <cite>El Grito</cite> fue pintada por Edvard Munch.</p>
+
+    <hr>
+
+    <h2>Listas</h2>
+    <h3>&lt;ul&gt; y &lt;ol&gt; - Listas</h3>
+    <p><strong>&lt;ul&gt;</strong> es una lista desordenada (con puntitos). <strong>&lt;ol&gt;</strong> es una lista ordenada (con números). <strong>&lt;li&gt;</strong> es cada elemento de la lista.</p>
+    <p><em>Ejemplo 1: Lista de la compra (desordenada).</em></p>
+    <ul>
+        <li>Leche</li>
+        <li>Pan</li>
+        <li>Manzanas</li>
+    </ul>
+    <p><em>Ejemplo 2: Pasos a seguir (ordenada).</em></p>
+    <ol>
+        <li>Abrir la puerta</li>
+        <li>Encender la luz</li>
+        <li>Cerrar la puerta</li>
+    </ol>
+    
+    <hr>
+    
+    <h2>Formato de Texto Adicional</h2>
+    
+    <h3>&lt;abbr&gt; - Abreviatura</h3>
+    <p>Se usa para definir una abreviatura o acrónimo. Se puede añadir un `title` para ver el significado completo.</p>
+    <p><em>Ejemplo 1:</em> <abbr title="Organización Mundial de la Salud">OMS</abbr></p>
+    <p><em>Ejemplo 2:</em> Aprendimos <abbr title="HyperText Markup Language">HTML</abbr> y <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+
+    <h3>&lt;u&gt;, &lt;del&gt;, &lt;ins&gt;, &lt;s&gt; - Edición y Estilo</h3>
+    <p><u>&lt;u&gt;</u> subraya. <del>&lt;del&gt;</del> tacha texto eliminado. <ins>&lt;ins&gt;</ins> subraya texto insertado. <s>&lt;s&gt;</s> tacha texto que ya no es correcto.</p>
+    <p><em>Ejemplo 1: Corrección de un texto</em></p>
+    <p>Mi fruta favorita es la <del>pera</del> <ins>manzana</ins>.</p>
+    <p><em>Ejemplo 2: Un producto en oferta</em></p>
+    <p>Precio anterior: <s>99€</s>. ¡Ahora solo 49€!</p>
+
+    <h3>&lt;code&gt; y &lt;pre&gt; - Código</h3>
+    <p><strong>&lt;code&gt;</strong> se usa para una línea corta de código. <strong>&lt;pre&gt;</strong> para un bloque de código, ya que respeta los espacios y saltos de línea.</p>
+    <p><em>Ejemplo 1 (code):</em></p>
+    <p>Para imprimir en la consola, usa la función <code>console.log()</code>.</p>
+    <p><em>Ejemplo 2 (pre):</em></p>
+    <pre>
+    function saludar() {
+        console.log("¡Hola, mundo!");
+    }
+    </pre>
+    
+    <hr>
+
+    <h2>Enlaces e Imágenes</h2>
+    <h3>&lt;a&gt; - Enlace</h3>
+    <p>Crea un hipervínculo (link) a otra página o a un lugar en la misma página.</p>
+    <p><em>Ejemplo 1: Enlace externo que se abre en una pestaña nueva.</em></p>
+    <a href="https://www.google.com" target="_blank">Ir a Google</a>
+    <p><em>Ejemplo 2: Enlace a una sección de esta misma página.</em></p>
+    <a href="#seccion_tabla">Haz clic aquí para ir a la sección de Tablas.</a>
+
+    <h3>&lt;img&gt; - Imagen</h3>
+    <p>Inserta una imagen en la página. El atributo <strong>src</strong> es la ruta de la imagen y <strong>alt</strong> es el texto alternativo.</p>
+    <p><em>Ejemplo 1: Imagen simple.</em></p>
+    <img src="https://via.placeholder.com/150" alt="Un cuadrado gris de 150x150 píxeles">
+    <p><em>Ejemplo 2: Imagen con un tamaño definido.</em></p>
+    <img src="https://via.placeholder.com/250x100" alt="Un rectángulo gris" width="250">
+    
+    <hr>
+
+    <h2 id="seccion_tabla">Tablas</h2>
+    <h3>&lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt; - Tablas</h3>
+    <p>Se usan para mostrar datos en filas y columnas.</p>
+    <p><em>Ejemplo 1: Horario simple.</em></p>
+    <table>
+      <thead>
+        <tr>
+            <th>Día</th>
+            <th>Actividad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>Lunes</td>
+            <td>Trabajo</td>
+        </tr>
+        <tr>
+            <td>Sábado</td>
+            <td>Descanso</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><em>Ejemplo 2: Lista de contactos.</em></p>
+    <table>
+        <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Teléfono</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td>Juan</td>
+              <td>Pérez</td>
+              <td>555-1234</td>
+          </tr>
+          <tr>
+              <td>Ana</td>
+              <td>García</td>
+              <td>555-5678</td>
+          </tr>
+        </tbody>
+      </table>
+
+</body>
+</html>

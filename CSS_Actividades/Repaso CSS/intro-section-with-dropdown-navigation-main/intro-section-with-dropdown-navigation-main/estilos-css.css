@@ -1,0 +1,84 @@
+:root {
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+.contenedor {
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Estilos a todos los navegadores */
+.navegadores {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1700px;
+    padding: 20px;
+}
+
+.navegadores a {
+    color: grey;
+    text-decoration: none;
+}
+
+.login_register {
+    display: flex;
+    flex-grow: 0.6;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.register  a{
+    margin-left: 50px;
+    border: solid grey;
+    border-radius: 10px;
+    padding: 9px 15px;
+    align-self: center;
+    border-radius: 15px;
+}
+
+/* Estilos al contenedor Inicio (todo menos los menus)*/
+.inicio {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    width: 1300px;
+    margin: 50px auto;
+    /*background-color: blueviolet;*/
+}
+
+/*reseteode margenes*/
+.inicio p, h1 {
+    margin: 0;
+}
+/* Estilos al texto*/
+.texto {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+/* Etilos a la imagen grande principal*/
+.imagen_principal {
+    display: flex;
+    flex: 2 0 33%;
+    width: 600px;
+    height: 700px;
+    /*background-color: aqua;*/
+}
+
+/*Estilos al titulo dentro del texto*/
+.tittle {
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    /*background-color: aqua;*/
+}
+
+/*Estilos al parrafo*/
+.parrafo {
+    display: block;
+    background-color: aqua
+    
+} 

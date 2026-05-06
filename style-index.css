@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@700&display=swap');
+
+:root {
+/* =========================================
+    TONOS VERDES (Acentos y Llamadas a la acción)
+     ========================================= */
+    --verde-neon: #39FF14;       /* Verde extremadamente brillante y moderno. */
+    --verde-terminal: #00CC00;   /* Verde clásico de consola, ideal para estados 'hover'. */
+    --verde-bosque: #0B2411;     /* Verde muy oscuro, casi negro. Genial para sutiles degradados. */
+
+  /* =========================================
+    TONOS NEGROS Y OSCUROS (Fondos y Estructura)
+     ========================================= */
+    --negro-puro: #000000;       /* Negro absoluto. Para sombras y contrastes extremos. */
+    --negro-mate: #121212;       /* Gris súper oscuro (estándar en UI Dark Mode). Relaja la vista. */
+    --negro-verdoso: #1A231C;    /* Gris muy oscuro con un toque de verde. ¡Este es el que hace que todo pegue! */
+
+  /* =========================================
+    TONOS CLAROS (Para lectura - Imprescindible)
+     ========================================= */
+    --blanco-menta: #E8F5E9;     /* Un blanco que refleja ligeramente el verde de tu tema. */
+    --gris-verdoso: #8A9A8D;     /* Para texto secundario o fechas que no deben destacar tanto. */
+
+  /* =========================================
+    VARIABLES SEMÁNTICAS (Aplicación práctica)
+     ========================================= */
+  
+  /* Fondos */
+    --bg-body: var(--negro-mate);
+    --bg-tarjetas: var(--negro-verdoso);
+    --bg-header: var(--negro-puro);
+    --bg-alerta: var(--verde-bosque);
+
+  /* Textos */
+    --texto-principal: var(--blanco-menta);
+    --texto-secundario: var(--gris-verdoso);
+  
+  /* Interacción (Botones, Links, Bordes) */
+    --color-brand: var(--verde-neon);
+    --color-brand-hover: var(--verde-terminal);
+  
+  /* Uso específico para botones para asegurar contraste */
+    --btn-bg: var(--verde-neon);
+    --btn-texto: var(--negro-puro); 
+
+
+    /* Tamaños de las fuentes */
+    --tamaño-h1: 6rem;
+    --tamaño-h2: 2.7rem;
+    --tamaño-h3: 2.3rem;
+    --tamaño-h4: 1.8rem;
+    --tamaño-p: 1.2rem;
+
+    /* Familia de las fuentes*/
+    
+
+/* =========================================
+    VARIABLES TIPOGRÁFICAS
+     ========================================= */
+    --fuente-titulos: 'Space Grotesk', sans-serif;
+    --fuente-texto: 'Inter', sans-serif;
+    --fuente-codigo: 'JetBrains Mono', monospace;
+
+  /* Grosores de fuente (Font Weights) para mantener consistencia */
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+
+html, body {
+    overflow-x: hidden;
+    font-family: sans-serif;
+    background-color: var(--negro-puro);
+    width: 100%;
+
+    
+}
+
+/* Estilos a las fuentes generales */
+
+/* =========================================
+   JERARQUÍA TIPOGRÁFICA BASE
+   ========================================= */
+
+h1 {
+    font-family: var(--fuente-titulos);
+    font-weight: var(--fw-bold);
+
+}
+
+h2 {
+    font-family: var(--fuente-titulos);
+    font-weight: var(--fw-bold);
+
+}
+
+h3 {
+    font-family: var(--fuente-titulos);
+    font-weight: var(--fw-semibold);
+
+}
+
+h4, a {
+    font-family: var(--fuente-codigo); /* Aquí metemos el toque hacker */
+    font-weight: var(--fw-regular);
+
+}
+
+p {
+    font-family: var(--fuente-texto);
+    font-weight: var(--fw-regular);
+    line-height: 1.6; /* Añadimos esto para que las líneas respiren y se lean mejor */
+
+}
+
+li {
+    font-family: var(--fuente-texto);
+    font-weight: var(--fw-regular);
+
+}
+
+
+.menu {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--negro-verdoso);
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--verde-terminal);
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s all ease;
+}
+
+.menu a:hover {
+    transform: scale(1.1);
+    background-color: #00cc0089;
+    font-weight: bold;
+    transition: 0.3s all ease;
+    
+}
+
+
+/* Estilo a las palabras resaltadas */
+.resaltado {
+    color: var(--verde-neon);
+}
+
+/* Estilos al header */
+header {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 0px auto;
+    background-color: var(--negro-mate);
+    gap: 0;
+    place-items: center;       /* Centra vertical y horizontalmente a la vez */
+    align-content: center;
+    border-radius: 0 0 20px 20px;
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 91%, 80% 95%, 50% 100%, 20% 96%, 0 93%, 0% 35%, 0 0);
+    
+}
+
+
+/* Estilos al titulo principial (h1) y al logo */
+.inicio {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1.5fr 0.5fr;
+    width: 85%;
+    
+}
+
+.titulo {
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 90%;
+    
+}
+
+.saludo {
+    color: var(--negro-puro);
+    background-color: var(--verde-neon);
+    display: inline-block;
+    padding: 1px 10px 0 0;
+    border-radius: 20px;
+}
+
+
+/* Estilos al titulo principal */
+h1 {
+    color: var(--blanco-menta);
+    font-size: var(--tamaño-h1);
+    font-weight: bold;
+}
+
+/* Sección */
+
+.introduction {
+    color: white;
+    padding: 10px 30px;
+    margin: 50px auto 30px;
+    border-radius: 15px;
+}
+
+.introduction h2 {
+    margin-bottom: 20px;
+    color: var(--verde-neon);
+    text-align: center;
+    font-size: var(--tamaño-h2);
+}
+
+
+.introduction p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--gris-verdoso);
+    font-weight: bold;
+}
+
+
+/* Estilos a los 2 contenedores de las Actividades */
+
+.actividades {
+    width: 80%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+}
+
+.actividades-html, .actividades-css {
+    background-color: var(--gris-verdoso);
+    color: var(--negro-puro);
+    padding: 30px 50px;
+    margin: 5% auto;
+    width: 90%;
+    border-radius: 15px;
+    text-align: center;
+    cursor: default;
+
+}
+
+.actividades article h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.act, .proyecto1 {
+    list-style: none;
+    align-items: center;
+}
+
+/* Estilos a los li de las actividades de HTML y CSS*/
+.act, .proyecto  {
+    background-color: var(--verde-neon);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    border-left: solid 5px var(--negro-puro);
+    transition: transform 0.5s ease; /* Suaviza el efecto al volver dle hover  */
+}
+
+.act:hover, .proyecto:hover { /*Estilos cuando pasemos el raton por encima*/
+    transform: scale(1.05); /* Aumenta el tamaño en un 20% */
+    background-color: #00cc00da; /*Color de fondo el definido arriba*/
+    font-weight: bold;
+    transition: transform 0.5s ease; /* Suaviza el efecto */
+}
+
+
+/* Estilos a los enlaces de las actividades de HTML y CSS*/
+.act a {
+    color: var(--general_color4);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+/* Estilos a la seccion "mini-proyectos"*/
+.mini-proyectos {
+    padding: 2% 0;
+    background-color: var(--negro-mate);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.container-mini-proyectos {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.container-titulo-mini-proyectos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.container-titulo-mini-proyectos h2 {
+    color: var(--verde-neon);
+    font-size: var(--tamaño-h2);
+}
+
+.container-titulo-mini-proyectos p {
+    color: var(--gris-verdoso);
+    font-size: var(--tamaño-p);
+    font-weight: bold;
+}
+
+
+.enlaces-proyectos {
+    background-color: var(--gris-verdoso);
+    color: var(--negro-puro);
+    padding: 30px 50px;
+    width: 100%;
+    border-radius: 15px;
+    text-align: center;
+    cursor: default;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+
+.enlaces-proyectos li a {
+    color: var(--general_color2);
+    text-decoration: none;
+}
+
+/* Estilos para los efectos al hacer scroll */
+
+.actividades-html.oculto {
+    opacity: 0;
+    transform: translateX(-150px);
+    transition: 1s all ease;
+}
+
+.actividades-html.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.actividades-css.oculto {
+    opacity: 0;
+    transform: translateX(150px);
+    transition: 1s all ease;
+}
+
+.actividades-css.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/*Responsive para móvil*/
+@media (max-width: 768px) {
+
+/* Estilos al inicio */
+.inicio {
+    text-align: center;
+    width: 90%;
+    margin-top: 30px;
+    display: grid;
+    justify-content: center !important;
+    grid-template-columns: 1fr;
+    height: auto;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0 auto;
+}
+
+.intro {
+    width: 100%;
+}
+
+.actividades {
+    display: grid;
+    grid-template-columns: 1fr ;
+    width: 100%;
+}
+
+
+img {
+    width: 95%;
+    height: 95%;
+    align-items: center;
+    margin-left: 0;
+}
+
+
+.introduction h2 {
+    font-size: 1.7rem;
+}
+
+.enlaces-proyectos {
+    display: flex;
+    flex-direction: column;
+}
+
+}   

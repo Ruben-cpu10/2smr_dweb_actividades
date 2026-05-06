@@ -1,0 +1,99 @@
+:root {
+    --background_color_boton1: #0000fe;
+}
+
+body {
+    background-image: url(./img/fondo_header.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+.mi_header {
+    margin: 0 auto;
+    width: 
+}
+
+/* Estilos a los navegadores */
+.navegadores {
+    width: 90%;
+    display: flex; /*Ponemos como flex*/
+    justify-content: space-between; /*Le indicamos la separación que queremos entre los navs que haya*/
+    margin-left: 100px; /*Margen izq del bloque entero de los navs*/
+    margin-right: 100px; /*Margen izq del bloque entero de los navs*/
+    
+}
+
+/* Estilos a el nav de navegacion */
+.navegación{
+    display: flex;
+    align-items: center;
+
+}
+
+/* Estilos a los enlaces del nav "navegación"  */
+.navegación a {
+    color: white; /*Color de la letra*/
+    text-decoration: none; /*Le quitamos el subrayado*/
+    margin-left: 100px; /*Margen izq entre los enlaces*/
+    margin-right: 100px; /*Margen izq entre los enlaces*/
+    font-size: 15px; /*Tamaño de los enlaces de navegación*/
+}
+
+/* Estilos a los logos de las redes sociales de manera indiviadual a cada uno */
+.redes_sociales img {
+    width: 80px; /*ancho de los logos*/
+    height: 100px; /*alto de los logos*/
+}
+
+/* Estilos al logo de la web*/
+.logo img {
+    width: 80px; /*ancho del logo*/
+    height: 100px; /*alto del logo*/
+}
+
+/*Estilos a texto de "Inicio"*/
+.inicio {
+    height: 75%;
+    display: flex; /*Lo ponemos tipo flex*/
+    flex-direction: column; /*direccion del ejee de flex vertical*/
+    align-items: center; /*alineación centrada*/
+    max-width: 800px;
+
+}
+
+/*Estilos al boton "Saber más"*/
+.boton1 {
+    background-color: var(--background_color_boton1); /*color de fondo*/
+    border-radius: 20px; /*Radio de 10px del borde*/
+    padding: 10px 30px; /*Relleno de 10px*/
+    
+}
+
+/* Estilos al texto del botón "Saber más" */
+.boton1 a {
+    text-decoration: none;
+    color: white;
+
+}
+
+/* Estilos al titulo de la sección "Incicio" */
+.titulo {
+    color: white;
+    font-size: 50px;
+    
+}
+
+/* Estilos al cuerpo de la sección "Inicio" */
+.cuerpo {
+    color:white; /*Color del texto blanco*/
+    display: flex; /*Estilo flexible*/
+    align-items: center; /*Items alineados en el centro*/
+    vertical-align: center;
+    text-align: center;
+    font-size: 30px;
+    max-width: 70%; 
+    
+
+}
+
+

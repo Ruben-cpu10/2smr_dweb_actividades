@@ -1,0 +1,221 @@
+:root {
+    --color-bg-dark: #c3b1e8;        /* Fondo general claro lila suave */ 
+    --color-bg-section: #faf5ff;     /* Fondo secciones más claro */ 
+    --color-surface-light: #ffffff;  /* Superficies claras (tarjetas, paneles) */ 
+    --color-accent: #8b5cf6;         /* Acento principal (lila moderno) */ 
+    --color-accent-alt: #06b6d4;     /* Acento secundario (turquesa suave) */   
+    --color-text-main: #111827;      /* Texto principal claro */ 
+    --color-accent-shadow: rgba(139, 92, 246, 0.85);    /* Sombra suave lila basada en el color-accent */
+}
+
+/* reseteor de margenes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos a todo el document */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* tipo de letra*/
+    background-color: var(--color-bg-dark); /* color de fondo*/
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    
+}
+
+/* Estilos al header */
+header {
+    background-color: var(--color-bg-section);
+    padding: 0 40px; /* padding derecha e izq */
+    display: flex; /* lo ponemos como un contenedor flexible */
+    flex-direction: row-reverse; /* le ponemos que sea en horizontal al reves*/
+    justify-content: space-between; /* espacio quye se quede uno a izq pegado y otro a la derecha*/
+     border-bottom: solid 3px var(--color-accent);
+    
+}
+
+/*  estilos al menu de navegación */
+nav {
+    /* background-color: #06b6d4; */
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    
+   
+
+}
+
+/* estilos a los li de los navegadores */
+nav li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* estilos a los enlaces del navegador */
+.navegadores a {
+    text-decoration: none; /* quitar el subrayado de los enlaces */
+    color: var(--color-text-main);
+    list-style: none; /* quitar las viñetas */
+    display: flex;
+    flex-direction: row;
+    font-weight: bold; /* texto en negrita */
+    
+    
+
+}
+
+/* estilos a los enlaces al pasar el raton por encima */
+.navegadores a:hover {
+    color: var(--color-accent);
+    transition: color ease 0.3s;
+}
+
+/*  estilos al titulo de "Series fan rating" */
+.title {
+    padding: 20px 0;
+}
+
+
+  /*El color de fondo es --color-bg-section. 
+o  El padding debe ser de 30px arriba y abajo, 24px izq y der. 
+o  Los dos elementos (texto,  registro) deben alinearse en fila (horizontal), con la 
+opción que más se parezca a la solución. De manera que el formulario ocupará 
+320px sin posibilidad de crecer ni comprimirse. 
+o  Alineación vertical centrada (align-items: center). 
+o  Espacio entre cajas interiores de 30px. 
+o  Margen superior de 24px 
+o  Border-radius de 16px*/
+
+
+/* estilos a la seccion 1 */
+.section1 {
+    margin: 20px 0; 
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-bg-section);
+    padding: 30px 24px;
+    border-radius: 16px;
+
+
+}
+ /* estilos al div seccion1 */
+.seccion1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+}
+
+.seccion1 p{
+    margin-top: 10px;
+}
+
+/* Estilos al formulario */
+.formulario {
+   border: solid 2px var(--color-accent); /*borde de color morado (--color-accent) con un tamaño de 2 px y estilo 
+sólido.*/
+   width: 320px; 
+   padding: 25px;
+   border-radius: 10px;
+   
+}
+
+/* estoilos a los imput del formulario */
+input {
+    width: 100%; /* ancho del 100%*/
+    margin-bottom: 10px; /* margen inferior */
+    background-color: var(--color-bg-dark);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.formulario p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilos al boton "Input" */
+button {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 0 auto;
+    padding: 0 100px;
+    border-radius: 10px;
+    background-color: var(--color-accent);
+
+}
+
+/* Estilos a la section2 */
+.section2 {
+    background-color: var(--color-bg-section);
+    margin: 0 auto  ;
+    border-radius: 16px;
+    
+    
+}
+
+
+
+.section2 h2 {
+    /* background-color: #8b5cf6; */
+    text-align: center;
+    padding: 10px;
+    border-bottom: solid 2px var(--color-accent);
+    width: 70%;
+    margin: 0 auto  ;
+}
+ 
+/* Estilos al contenedor de las tarjetas */
+.series {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     width: 70%;
+    margin: 0 auto  ;
+   
+    
+}
+
+
+img {
+    width: 100px;
+}
+
+/* Estilos a los articulos del div series */
+.series article {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+/* Estilos al footer */
+footer {
+    margin: 20px 0;
+    height: 80px; /* altura */
+    background-color: var(--color-bg-section);
+    font-size: 0.9rem;
+    padding: 0 40px; /* padding derecha e izq */
+    display: flex; /* lo ponemos como un contenedor flexible */
+    justify-content: center; /* centrado horizontalmente */
+    align-items: center; /*centrado verticalmente*/
+    border-bottom: solid 3px var(--color-accent);
+}
+
+
+
+
+

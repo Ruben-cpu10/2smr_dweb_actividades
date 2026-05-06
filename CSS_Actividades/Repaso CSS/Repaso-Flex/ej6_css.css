@@ -1,0 +1,44 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.contenedor_title {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: aqua;
+    justify-content: center;
+}
+.title {
+    font-size: 24px;
+}
+
+.contenedor_2 {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+}
+
+.zona_central {
+    display: flex;
+    flex: 3;
+    background-color: beige;
+    justify-content: center;
+}
+
+.lateral_izq {
+    height: 100vh;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.lateral_dere {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color: burlywood;
+}
